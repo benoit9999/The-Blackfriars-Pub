@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Carte – Bières, Cocktails & Food | The Blackfriars</title>
+    <meta name="description" content="Découvrez notre carte : 16 bières pression, cocktails signature, whiskies d'exception et plats british faits maison. Menu interactif The Blackfriars.">
+    <meta name="theme-color" content="#00402E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☘%3C/text%3E%3C/svg%3E">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "La Carte – The Blackfriars",
+        "description": "Bières pression, cocktails signature, whiskies et plats british faits maison.",
+        "hasMenuSection": [
+            {
+                "@type": "MenuSection",
+                "name": "Bières Pression",
+                "hasMenuItem": [
+                    {"@type": "MenuItem", "name": "London Pride", "description": "Amber ale iconique, notes de caramel et houblon floral", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "EUR"}},
+                    {"@type": "MenuItem", "name": "Guinness Draught", "description": "La mythique stout irlandaise, crémeuse et torréfiée", "offers": {"@type": "Offer", "price": "6.00", "priceCurrency": "EUR"}}
+                ]
+            },
+            {
+                "@type": "MenuSection",
+                "name": "Cocktails",
+                "hasMenuItem": [
+                    {"@type": "MenuItem", "name": "Blackfriars Old Fashioned", "description": "Bourbon, sucre de canne, angostura, orange zest", "offers": {"@type": "Offer", "price": "12.00", "priceCurrency": "EUR"}}
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="The Blackfriars – Accueil">
+                <div class="logo-icon">☘</div>
+                <div class="logo-text">The Blackfriars <span>Est. 2024 · Irish Pub</span></div>
+            </a>
+            <nav class="nav-desktop" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="carte.html">La Carte</a></li>
+                    <li><a href="evenements.html">Événements</a></li>
+                    <li><a href="privatisation.html">Privatisation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+3210123456" class="btn btn-primary header-cta">☎ Réserver une table</a>
+            <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <nav class="nav-mobile" id="mobileNav" aria-label="Navigation mobile">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte.html">La Carte</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="privatisation.html">Privatisation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-cta">
+            <a href="tel:+3210123456" class="btn btn-primary btn-lg">☎ Réserver une table</a>
+        </div>
+    </nav>
+
+    <!-- ═══ PAGE HERO ═══ -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-label">Notre Carte</span>
+            <h1>Bières, Cocktails <span class="accent">& Bonne Chair</span></h1>
+            <p>Des bières tirées avec soin, des cocktails pensés avec passion et une cuisine british généreuse.</p>
+        </div>
+    </section>
+
+    <!-- ═══ MENU ═══ -->
+    <section class="section" id="menuSection">
+        <div class="container">
+
+            <!-- Tabs -->
+            <div class="menu-tabs reveal" role="tablist">
+                <button class="menu-tab active" data-tab="bieres" role="tab" aria-selected="true">🍺 Bières Pression</button>
+                <button class="menu-tab" data-tab="cocktails" role="tab" aria-selected="false">🍸 Cocktails</button>
+                <button class="menu-tab" data-tab="whiskies" role="tab" aria-selected="false">🥃 Whiskies</button>
+                <button class="menu-tab" data-tab="food" role="tab" aria-selected="false">🍔 Food & Snacks</button>
+            </div>
+
+            <!-- ── Bières Pression ── -->
+            <div class="menu-category active" id="bieres">
+                <h3 class="menu-section-title reveal">Bières Pression — 16 Taps</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">London Pride <span class="menu-item-badge">Classique</span></div>
+                        <div class="menu-item-desc">Amber ale iconique de Fuller's. Notes de caramel, biscuit et houblon floral. 4.7% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">5,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Guinness Draught <span class="menu-item-badge">Incontournable</span></div>
+                        <div class="menu-item-desc">La mythique stout irlandaise. Crémeuse, torréfiée, avec des notes de café et de chocolat noir. 4.2% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">6,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Neck Oil IPA</div>
+                        <div class="menu-item-desc">Session IPA de Beavertown. Agrumes, résine de pin et finale sèche rafraîchissante. 4.3% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">6,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Doom Bar</div>
+                        <div class="menu-item-desc">Amber ale de Sharp's Brewery. Équilibrée, maltée, avec une touche d'amertume finement résinée. 4.3% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">5,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Old Speckled Hen</div>
+                        <div class="menu-item-desc">English pale ale riche et fruitée. Malts toffee, notes de pomme et finale douce. 5.0% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">5,80 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Camden Hells Lager</div>
+                        <div class="menu-item-desc">Lager londonienne, propre et vive. Houblons allemands, finale nette et désaltérante. 4.6% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">5,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">BrewDog Punk IPA</div>
+                        <div class="menu-item-desc">IPA post-punk, explosif de fruits tropicaux, pamplemousse et amertume affirmée. 5.4% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">6,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Timothy Taylor's Landlord</div>
+                        <div class="menu-item-desc">Pale ale primée, tout en délicatesse. Houblon Styrian Golding, notes de citron et pêche. 4.3% ABV</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">6,00 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍻</span></div>
+
+                <p style="text-align:center; color: var(--color-text-muted); font-size: 0.85rem;">+ 8 autres sélections rotatives. Demandez au bar pour la carte complète du jour.</p>
+            </div>
+
+            <!-- ── Cocktails ── -->
+            <div class="menu-category" id="cocktails">
+                <h3 class="menu-section-title reveal">Cocktails Signature</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Blackfriars Old Fashioned <span class="menu-item-badge">Signature</span></div>
+                        <div class="menu-item-desc">Bourbon Woodford Reserve, sucre de canne brûlé, angostura bitters, zeste d'orange flambé.</div>
+                    </div>
+                    <div class="menu-item-price">12,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">The Friar's Mule <span class="menu-item-badge">Signature</span></div>
+                        <div class="menu-item-desc">Vodka premium, ginger beer artisanale, citron vert pressé, feuilles de menthe fraîche.</div>
+                    </div>
+                    <div class="menu-item-price">11,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">London Sour</div>
+                        <div class="menu-item-desc">Gin londonien, jus de citron, sirop de lavande, blanc d'œuf, dash de bitter aromatique.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Œuf">🥚</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">12,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Espresso Martini</div>
+                        <div class="menu-item-desc">Vodka, Kahlúa, espresso fraîchement tiré, sirop de vanille. Secoué, pas remué.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">13,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Peaky Blinder</div>
+                        <div class="menu-item-desc">Irish whiskey, amaro, miel de bruyère, bitter orange, fumé au bois de chêne.</div>
+                    </div>
+                    <div class="menu-item-price">14,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Pimm's Cup</div>
+                        <div class="menu-item-desc">Pimm's No.1, limonade maison, concombre, menthe, fraises fraîches et orange.</div>
+                    </div>
+                    <div class="menu-item-price">10,00 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍸</span></div>
+
+                <h3 class="menu-section-title reveal">Classiques</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Gin & Tonic Premium</div>
+                        <div class="menu-item-desc">Choix parmi notre sélection de 8 gins + Fever-Tree tonics. Garniture assortie.</div>
+                    </div>
+                    <div class="menu-item-price">10,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Mojito</div>
+                        <div class="menu-item-desc">Rhum cubain, menthe fraîche, citron vert, sucre de canne, eau pétillante.</div>
+                    </div>
+                    <div class="menu-item-price">10,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Whisky Sour</div>
+                        <div class="menu-item-desc">Bourbon, jus de citron, sirop de sucre, blanc d'œuf, cerise Amarena.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Œuf">🥚</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">11,00 €</div>
+                </div>
+            </div>
+
+            <!-- ── Whiskies ── -->
+            <div class="menu-category" id="whiskies">
+                <h3 class="menu-section-title reveal">Scotch Single Malt</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenfiddich 12 <span class="menu-item-badge">Speyside</span></div>
+                        <div class="menu-item-desc">Notes de poire fraîche, chêne subtil et touche crémeuse. Accessible et élégant.</div>
+                    </div>
+                    <div class="menu-item-price">8,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Talisker 10 <span class="menu-item-badge">Isle of Skye</span></div>
+                        <div class="menu-item-desc">Maritime et poivré. Fumée de tourbe, sel marin, finale longue et épicée.</div>
+                    </div>
+                    <div class="menu-item-price">10,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Lagavulin 16 <span class="menu-item-badge">Islay</span></div>
+                        <div class="menu-item-desc">Intense, tourbé, avec des notes de fumée douce, sherry et fruits secs. Légendaire.</div>
+                    </div>
+                    <div class="menu-item-price">14,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Macallan 18 Sherry Oak <span class="menu-item-badge">Premium</span></div>
+                        <div class="menu-item-desc">Exceptionnel. Fruits secs, épices de Noël, chocolat, miel et finale interminable.</div>
+                    </div>
+                    <div class="menu-item-price">28,00 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🥃</span></div>
+
+                <h3 class="menu-section-title reveal">Irish Whiskey</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jameson Original</div>
+                        <div class="menu-item-desc">Triple distillé, doux et accessible. Vanille, noisette et touche de sherry.</div>
+                    </div>
+                    <div class="menu-item-price">7,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Redbreast 12</div>
+                        <div class="menu-item-desc">Single pot still somptueux. Fruits confits, noix, crème et finale épicée complexe.</div>
+                    </div>
+                    <div class="menu-item-price">12,00 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🥃</span></div>
+
+                <h3 class="menu-section-title reveal">Bourbon & Rye</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Woodford Reserve</div>
+                        <div class="menu-item-desc">Kentucky bourbon premium. Caramel, vanille, orange confite et épices douces.</div>
+                    </div>
+                    <div class="menu-item-price">9,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bulleit Rye</div>
+                        <div class="menu-item-desc">Rye whiskey audacieux. Seigle prononcé, cerises noires, poivre et chêne toasté.</div>
+                    </div>
+                    <div class="menu-item-price">9,00 €</div>
+                </div>
+            </div>
+
+            <!-- ── Food & Snacks ── -->
+            <div class="menu-category" id="food">
+                <h3 class="menu-section-title reveal">Plats — Kitchen</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">The Blackfriars Burger <span class="menu-item-badge">Maison ★</span></div>
+                        <div class="menu-item-desc">200g de bœuf Black Angus, cheddar affiné, bacon fumé, pickles maison, sauce Blackfriars. Servi avec frites croustillantes.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                            <span class="allergen-icon" title="Moutarde">🟡</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">16,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Fish & Chips <span class="menu-item-badge">Maison ★</span></div>
+                        <div class="menu-item-desc">Cabillaud en pâte à la bière, frites épaisses, purée de petits pois, sauce tartare maison et quartier de citron.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                            <span class="allergen-icon" title="Poisson">🐟</span>
+                            <span class="allergen-icon" title="Œuf">🥚</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">15,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Shepherd's Pie</div>
+                        <div class="menu-item-desc">Hachis d'agneau mijoté aux légumes, croûte de purée gratinée au cheddar. Comfort food à la britannique.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">14,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bangers & Mash</div>
+                        <div class="menu-item-desc">Saucisses artisanales de Cumberland, purée onctueuse, oignons caramélisés et gravy maison.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">13,50 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍟</span></div>
+
+                <h3 class="menu-section-title reveal">Snacks & Sharing</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Scotch Eggs (x2) <span class="menu-item-badge">Maison ★</span></div>
+                        <div class="menu-item-desc">Œufs mollets enrobés de chair à saucisse et panés, servis avec chutney de tomates vertes.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                            <span class="allergen-icon" title="Œuf">🥚</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">8,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Loaded Nachos</div>
+                        <div class="menu-item-desc">Tortillas croustillantes, cheddar fondu, jalapeños, guacamole, sour cream et salsa.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">9,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chicken Wings (8 pcs)</div>
+                        <div class="menu-item-desc">Ailes de poulet croustillantes. Choix : BBQ fumé, Buffalo hot ou Honey Mustard. Servi avec dip blue cheese.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                            <span class="allergen-icon" title="Moutarde">🟡</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">10,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cheese Board</div>
+                        <div class="menu-item-desc">Sélection de fromages britanniques affinés (Stilton, Cheddar, Red Leicester), crackers, chutney et raisins.</div>
+                        <div class="menu-item-allergens">
+                            <span class="allergen-icon" title="Lait">🥛</span>
+                            <span class="allergen-icon" title="Gluten">🌾</span>
+                        </div>
+                    </div>
+                    <div class="menu-item-price">14,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Portion de Frites</div>
+                        <div class="menu-item-desc">Frites fraîches maison, croustillantes à l'extérieur, fondantes à l'intérieur. Ketchup ou mayo.</div>
+                    </div>
+                    <div class="menu-item-price">4,50 €</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">☘</div>
+                        <div class="logo-text">The Blackfriars <span>Irish Pub</span></div>
+                    </a>
+                    <p>L'authenticité d'un pub irlandais au cœur de Louvain-la-Neuve.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="carte.html">La Carte</a></li>
+                        <li><a href="evenements.html">Événements & Sport</a></li>
+                        <li><a href="privatisation.html">Privatisation</a></li>
+                        <li><a href="contact.html">Contact & Accès</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+3210123456">+32 10 123 456</a></li>
+                        <li><a href="mailto:contact@theblackfriars.be">contact@theblackfriars.be</a></li>
+                        <li>12 Place de l'Université</li>
+                        <li>1348 Louvain-la-Neuve</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/theblackfriars_lln" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                        <a href="https://facebook.com/theblackfriarslln" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 The Blackfriars. Sláinte! ☘</p>
+                <p>L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="tel:+3210123456" class="btn btn-primary">☎ Appeler</a>
+        <a href="https://maps.google.com/?q=The+Blackfriars+Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-secondary">📍 Y aller</a>
+        <a href="tel:+3210123456" class="btn btn-outline-copper">Réserver</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
