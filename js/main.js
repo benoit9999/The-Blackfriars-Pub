@@ -45,65 +45,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // ═══ HOURS WIDGET ═══
     const hoursWidget = document.getElementById('hoursWidget');
     if (hoursWidget) {
-        const schedule = {
-            0: { open: 0, close: 0 },      // Dimanche
-            1: { open: 19, close: 24 },    // Lundi
-            2: { open: 19, close: 24 },    // Mardi
-            3: { open: 19, close: 24 },    // Mercredi
-            4: { open: 19, close: 24 },    // Jeudi
-            5: { open: 19, close: 24 },    // Vendredi
-            6: { open: 0, close: 0 },      // Samedi
-        };
-
-        const dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-
         function updateHoursWidget() {
             const now = new Date();
-            const dayIndex = now.getDay();
+            const dayIndex = now.getDay(); // 0 is Sunday, 1 is Monday ...
             const currentHour = now.getHours() + now.getMinutes() / 60;
-            const today = schedule[dayIndex];
-            const isOpen = currentHour >= today.open && currentHour < today.close;
-
-            const dot = hoursWidget.querySelector('.dot');
-            const statusText = hoursWidget.querySelector('.status-text');
-
-            if (isOpen) {
-                dot.className = 'dot open';
-                const closeDisplay = today.close > 24 ? `${today.close - 24}h00` : `${today.close}h00`;
-                statusText.textContent = `Ouvert maintenant • Ferme à ${closeDisplay}`;
-            } else {
-                dot.className = 'dot closed';
-                // Find next opening
-                let nextDay = dayIndex;
-                let nextSchedule = schedule[nextDay];
-                
-                if (currentHour < nextSchedule.open && nextSchedule.open !== 0) {
-                    statusText.textContent = `Fermé • Ouvre aujourd'hui à ${nextSchedule.open}h00`;
-                } else {
-                    let found = false;
-                    for (let i = 1; i <= 7; i++) {
-                        nextDay = (dayIndex + i) % 7;
-                        nextSchedule = schedule[nextDay];
-                        if (nextSchedule.open !== 0) {
-                            statusText.textContent = `Fermé • Ouvre ${dayNames[nextDay]} à ${nextSchedule.open}h00`;
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (!found) statusText.textContent = `Fermé actuellement`;
-                }
-            }
-
+            
             // Highlight today's row
             const rows = hoursWidget.querySelectorAll('.hours-row');
-            rows.forEach((row, i) => {
-                const adjustedIndex = (i + 1) % 7; // Lundi=1 ... Dimanche=0
-                if (adjustedIndex === dayIndex) {
-                    row.classList.add('today');
+            rows.forEach(row => {
+                const rowDay = parseInt(row.getAttribute('data-day'), 10);
+                if (rowDay === dayIndex) {
+                    row.classList.add('active-day');
                 } else {
-                    row.classList.remove('today');
+                    row.classList.remove('active-day');
                 }
             });
+
+            // Status tracker logic
+            const statusTracker = document.getElementById('hoursStatusTracker');
+            const statusText = document.getElementById('statusText');
+            
+            if (statusTracker && statusText) {
+                // Open between Mon(1) to Fri(5), 19:00 to 00:00 (which is hour 19 to 23.99)
+                const isWorkingDay = dayIndex >= 1 && dayIndex <= 5;
+                const isOpenTime = currentHour >= 19 && currentHour < 24;
+                const isOpen = isWorkingDay && isOpenTime;
+
+                if (isOpen) {
+                    statusTracker.className = 'hours-status-header status-open';
+                    statusText.textContent = 'Ouvert maintenant • Ferme à 00h00';
+                } else {
+                    statusTracker.className = 'hours-status-header status-closed';
+                    statusText.textContent = 'Actuellement fermé • Ouvre à 19h00';
+                }
+            }
         }
 
         updateHoursWidget();

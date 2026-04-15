@@ -238,19 +238,56 @@
                 <hr class="gold-line">
             </div>
 
-            <div class="hours-split reveal">
-                <div class="hours-col">
-                    <h3>🍺 Espace Bar</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: var(--space-md);">
-                        De 19h à minuit, du lundi au vendredi,<br>hors jours fériés et congés universitaires.
-                    </p>
+            <div class="hours-widget-container reveal" id="hoursWidget">
+                <div class="hours-card">
+                    <!-- Status Header -->
+                    <div class="hours-status-header status-closed" id="hoursStatusTracker">
+                        <span class="pulse-dot"></span>
+                        <span class="status-text" id="statusText">Calcul en cours...</span>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="hours-table" id="hoursTable">
+                        <div class="hours-row" data-day="1">
+                            <span class="day-name">Lundi</span>
+                            <span class="day-time">19h00 — 00h00</span>
+                        </div>
+                        <div class="hours-row" data-day="2">
+                            <span class="day-name">Mardi</span>
+                            <span class="day-time">19h00 — 00h00</span>
+                        </div>
+                        <div class="hours-row" data-day="3">
+                            <span class="day-name">Mercredi</span>
+                            <span class="day-time">19h00 — 00h00</span>
+                        </div>
+                        <div class="hours-row" data-day="4">
+                            <span class="day-name">Jeudi</span>
+                            <span class="day-time">19h00 — 00h00</span>
+                        </div>
+                        <div class="hours-row" data-day="5">
+                            <span class="day-name">Vendredi</span>
+                            <span class="day-time">19h00 — 00h00</span>
+                        </div>
+                        <div class="hours-row closed" data-day="6">
+                            <span class="day-name">Samedi</span>
+                            <span class="day-time">Fermé</span>
+                        </div>
+                        <div class="hours-row closed" data-day="0">
+                            <span class="day-name">Dimanche</span>
+                            <span class="day-time">Fermé</span>
+                        </div>
+                    </div>
+
+                    <div class="hours-footer">
+                        Hors jours fériés et congés universitaires.
+                    </div>
                 </div>
-                <div class="hours-col">
+
+                <!-- Kitchen section -->
+                <div class="kitchen-card">
                     <h3>🍽️ Service Cuisine</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: var(--space-md);">
-                        Petite restauration de 19h00 à 21h30<br>
-                        <em>(réservation souhaitée jusqu'à 18h30 pour le jour-même).</em>
-                    </p>
+                    <p>Petite restauration de 19h00 à 21h30</p>
+                    <p class="kitchen-note">(Réservation souhaitée jusqu'à 18h30 pour le jour même).</p>
                 </div>
             </div>
         </div>
