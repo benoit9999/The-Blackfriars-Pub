@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation – The Blackfriars | Irish Pub à Louvain-la-Neuve</title>
+    <meta name="description" content="Réservez votre table au Blackfriars, le pub irlandais de référence à Louvain-la-Neuve. Soirées, repas british et dégustations de whiskies.">
+    <meta name="theme-color" content="#00402E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☘%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="The Blackfriars – Accueil">
+                <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img">
+            </a>
+            <nav class="nav-desktop" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="a-propos.html" aria-haspopup="true">À Propos ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="a-propos.html">Notre Histoire</a></li>
+                            <li><a href="whisky-academy.html">Blackfriars Whisky Academy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="carte.html">La Carte</a></li>
+                    <li><a href="reservation.html" class="active">Réservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="reservation.html" class="btn btn-primary header-cta">☎ Réserver une table</a>
+            <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <nav class="nav-mobile" id="mobileNav" aria-label="Navigation mobile">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="a-propos.html">À Propos ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="a-propos.html">Notre Histoire</a></li>
+                    <li><a href="whisky-academy.html">Whisky Academy</a></li>
+                </ul>
+            </li>
+            <li><a href="carte.html">La Carte</a></li>
+            <li><a href="reservation.html" class="active">Réservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-cta">
+            <a href="reservation.html" class="btn btn-primary btn-lg">☎ Réserver une table</a>
+        </div>
+    </nav>
+
+    <!-- ═══ PAGE HERO ═══ -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-label">Venez passer un moment inoubliable</span>
+            <h1>Réserver votre <span class="accent">Table</span></h1>
+            <p>Remplissez le formulaire ci-dessous pour confirmer votre venue. Nous préparerons tout pour vous accueillir dans les meilleures conditions.</p>
+        </div>
+    </section>
+
+    <!-- ═══ RESERVATION FORM ═══ -->
+    <section class="section">
+        <div class="container reveal">
+            <div class="reservation-form-container">
+                <div style="background: rgba(212,175,55,0.1); border-left: 4px solid var(--color-gold); padding: var(--space-md); margin-bottom: var(--space-lg); border-radius: 4px;">
+                    <p style="color: var(--color-text); font-size: 0.95rem; margin: 0;">S'il reste moins de 8h00 avant la visite projetée veuillez, de préférence, nous contacter par téléphone au <a href="tel:+32472557550" style="color: var(--color-gold);">+32 (0)472.557.550</a>. Nous enregistrons les réservations jusqu'à 18h30 pour le jour même.</p>
+                </div>
+                <form id="reservationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="resName">Nom et Prénom *</label>
+                            <input type="text" id="resName" class="form-input" required placeholder="Votre nom complet">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="resEmail">Adresse électronique *</label>
+                            <input type="email" id="resEmail" class="form-input" required placeholder="vous@exemple.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="resPhone">Numéro de contact *</label>
+                            <input type="tel" id="resPhone" class="form-input" required placeholder="+32 ...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="resGuests">Nombre de convives *</label>
+                            <select id="resGuests" class="form-select" required>
+                                <option value="1">1 personne</option>
+                                <option value="2" selected>2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes</option>
+                                <option value="6">6 personnes</option>
+                                <option value="7">7 personnes</option>
+                                <option value="8">8 personnes</option>
+                                <option value="9+">9+ personnes (Nous contacterons pour confirmation)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="resDate">Date de réservation *</label>
+                            <input type="date" id="resDate" class="form-input" required style="color-scheme: dark;">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="resTime">Heure approximative *</label>
+                            <input type="time" id="resTime" class="form-input" required style="color-scheme: dark;">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: var(--space-xl);">
+                        <label class="form-label" style="font-size: 1rem; color: var(--color-gold); margin-bottom: var(--space-md);">Options Complémentaires</label>
+                        
+                        <label class="custom-checkbox-row">
+                            <input type="checkbox" id="optRepas" name="options" value="Repas">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label">Je souhaite prendre un repas (Nous réserverons une table adaptée côté restaurant).</span>
+                        </label>
+                        
+                        <label class="custom-checkbox-row">
+                            <input type="checkbox" id="optWhisky" name="options" value="Degustation">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label">Je souhaite une dégustation personnalisée de whiskies avec vos conseils.</span>
+                        </label>
+
+                        <label class="custom-checkbox-row">
+                            <input type="checkbox" id="optAcademy" name="options" value="Initiation">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-label">Je souhaite une initiation à l'univers du whisky via la Whisky Academy (Minimum 5 participants requis).</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group" style="margin-top: var(--space-lg);">
+                        <label class="form-label" for="resMessage">Message éventuel ou demande spéciale</label>
+                        <textarea id="resMessage" class="form-textarea" placeholder="Allergies, anniversaire, emplacement souhaité..."></textarea>
+                    </div>
+
+                    <div style="text-align: center; margin-top: var(--space-2xl);">
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 300px;">Confirmer la réservation</button>
+                        <p style="color: var(--color-gold); font-family: var(--font-heading); font-size: 1.2rem; margin-top: var(--space-lg);">Au plaisir de vous accueillir !</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img logo-img--footer">
+                    </a>
+                    <p>L'authenticité d'un pub irlandais au cœur de Louvain-la-Neuve.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À Propos</a></li>
+                        <li><a href="carte.html">La Carte</a></li>
+                        <li><a href="reservation.html">Réservation</a></li>
+                        <li><a href="contact.html">Contact & Accès</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+32472557550">+32 (0)472 557 550</a></li>
+                        <li><a href="mailto:info@blackfriars.pub">info@blackfriars.pub</a></li>
+                        <li>Rue René Magritte, 7</li>
+                        <li>1348 Louvain-la-Neuve</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/theblackfriars_lln" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                        <a href="https://facebook.com/theblackfriarslln" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 The Blackfriars. Sláinte! ☘</p>
+                <p>L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="tel:+32472557550" class="btn btn-primary">☎ Appeler</a>
+        <a href="https://maps.google.com/?q=Rue+René+Magritte+7+1348+Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-secondary">📍 Y aller</a>
+        <a href="reservation.html" class="btn btn-outline-copper">Réserver</a>
+    </div>
+
+    <!-- Script Inline pour Formulaire -->
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Demande client : La redirection/envoi d'email sera géré plus tard,
+            // juste un affichage fonctionnel pour le moment.
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Demande envoyée !';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #66BB6A)';
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+                this.reset();
+            }, 3000);
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

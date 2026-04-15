@@ -79,14 +79,20 @@
             <nav class="nav-desktop" aria-label="Navigation principale">
                 <ul>
                     <li><a href="index.html" class="active">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="a-propos.html" aria-haspopup="true">À Propos ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="a-propos.html">Notre Histoire</a></li>
+                            <li><a href="whisky-academy.html">Blackfriars Whisky Academy</a></li>
+                        </ul>
+                    </li>
                     <li><a href="carte.html">La Carte</a></li>
-                    <li><a href="evenements.html">Événements</a></li>
-                    <li><a href="privatisation.html">Privatisation</a></li>
+                    <li><a href="reservation.html">Réservation</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
-            <a href="tel:+3210123456" class="btn btn-primary header-cta" id="headerReserveBtn">
+            <a href="reservation.html" class="btn btn-primary header-cta" id="headerReserveBtn">
                 ☎ Réserver une table
             </a>
 
@@ -100,13 +106,19 @@
     <nav class="nav-mobile" id="mobileNav" aria-label="Navigation mobile">
         <ul>
             <li><a href="index.html" class="active">Accueil</a></li>
+            <li class="dropdown">
+                <a href="a-propos.html">À Propos ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="a-propos.html">Notre Histoire</a></li>
+                    <li><a href="whisky-academy.html">Whisky Academy</a></li>
+                </ul>
+            </li>
             <li><a href="carte.html">La Carte</a></li>
-            <li><a href="evenements.html">Événements</a></li>
-            <li><a href="privatisation.html">Privatisation</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="mobile-cta">
-            <a href="tel:+3210123456" class="btn btn-primary btn-lg">☎ Réserver une table</a>
+            <a href="reservation.html" class="btn btn-primary btn-lg">☎ Réserver une table</a>
         </div>
     </nav>
 
@@ -119,21 +131,33 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-            <div class="hero-badge">☘ Authentic Irish Pub · Sláinte!</div>
+            <div class="hero-badge">☘ Authentic Irish Pub </div>
             <h1>L'esprit d'un Pub Irlandais <span class="accent">au cœur de Louvain-la-Neuve</span></h1>
             <p class="hero-subtitle">Guinness tirée à la perfection, whiskeys d'exception, live music et une craic
                 incomparable. Céad míle fáilte — cent mille bienvenues.</p>
             <div class="hero-actions">
-                <a href="tel:+3210123456" class="btn btn-primary btn-lg">☎ Réserver une table</a>
+                <a href="reservation.html" class="btn btn-primary btn-lg">☎ Réserver une table</a>
                 <a href="carte.html" class="btn btn-secondary btn-lg">Voir la Carte →</a>
             </div>
         </div>
 
         <div class="hero-scroll">
-            <span>Scroll</span>
+            <span></span>
             <div class="scroll-line"></div>
         </div>
     </section>
+
+    <!-- ═══ L'ÉCHO DU BLACKFRIARS (News) ═══ -->
+    <div class="container reveal">
+        <div class="echo-block">
+            <div class="echo-icon">🗞️</div>
+            <div class="echo-content">
+                <h3>L'Écho du Blackfriars</h3>
+                <p><strong>Nouveauté à la pression :</strong> Découvrez notre nouvelle Irish Red Ale brassée localement,
+                    parfaite pour accompagner nos plats réconfortants !</p>
+            </div>
+        </div>
+    </div>
 
     <!-- ═══ AMBIANCE GALLERY ═══ -->
     <section class="section" id="ambiance">
@@ -203,88 +227,7 @@
         </div>
     </section>
 
-    <!-- ═══ LIVE AU BLACKFRIARS ═══ -->
-    <section class="section" id="live">
-        <div class="container">
-            <div class="text-center reveal">
-                <span class="section-label">Ce Soir</span>
-                <h2 class="section-title">Live au <span class="accent">Blackfriars</span></h2>
-                <hr class="gold-line">
-                <p class="section-desc">La musique fait vibrer nos murs chaque semaine. Concerts intimistes, sessions
-                    folk et soirées festives dans la plus pure tradition des pubs irlandais.</p>
-            </div>
-
-            <div class="live-section reveal">
-                <div class="live-badge">En Live</div>
-                <h3 style="font-size: 1.6rem; margin-bottom: var(--space-sm); color: var(--color-gold);">🎸 Programme
-                    Musical</h3>
-                <p style="color: var(--color-text-muted); margin-bottom: var(--space-xl); line-height: 1.7;">Nos
-                    musiciens et groupes locaux se produisent dans l'atmosphère chaleureuse du Blackfriars. Guitare,
-                    violon, bodhrán et voix pour des sessions inoubliables.</p>
-
-                <div style="display: grid; gap: var(--space-md);">
-                    <div
-                        style="display: flex; gap: var(--space-lg); align-items: center; padding: var(--space-md); background: rgba(255,191,0,0.05); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-                        <div style="text-align: center; min-width: 50px;">
-                            <div
-                                style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-gold);">
-                                VEN</div>
-                            <div style="font-size: 0.7rem; color: var(--color-text-muted);">21h00</div>
-                        </div>
-                        <div>
-                            <div style="font-family: var(--font-heading); font-weight: 600; margin-bottom: 2px;">Irish
-                                Folk Session</div>
-                            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Trad music live – violon,
-                                guitare acoustique et bodhrán. Entrée libre.</div>
-                        </div>
-                    </div>
-
-                    <div
-                        style="display: flex; gap: var(--space-lg); align-items: center; padding: var(--space-md); background: rgba(255,191,0,0.05); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-                        <div style="text-align: center; min-width: 50px;">
-                            <div
-                                style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-gold);">
-                                SAM</div>
-                            <div style="font-size: 0.7rem; color: var(--color-text-muted);">22h00</div>
-                        </div>
-                        <div>
-                            <div style="font-family: var(--font-heading); font-weight: 600; margin-bottom: 2px;">The
-                                Celtic Rovers</div>
-                            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Pop-rock celtique, reprises
-                                de The Pogues et Dropkick Murphys. Ambiance garantie!</div>
-                        </div>
-                    </div>
-
-                    <div
-                        style="display: flex; gap: var(--space-lg); align-items: center; padding: var(--space-md); background: rgba(255,191,0,0.05); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-                        <div style="text-align: center; min-width: 50px;">
-                            <div
-                                style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--color-gold);">
-                                MAR</div>
-                            <div style="font-size: 0.7rem; color: var(--color-text-muted);">20h00</div>
-                        </div>
-                        <div>
-                            <div style="font-family: var(--font-heading); font-weight: 600; margin-bottom: 2px;">🧩 Quiz
-                                Night</div>
-                            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Culture gé, blindtest
-                                musical et questions insolites. Lots à gagner et pintes offertes !</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: var(--space-xl); text-align: center;">
-                    <a href="evenements.html" class="btn btn-primary">Voir tous les événements →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══ SHAMROCK DIVIDER ═══ -->
-    <div class="container">
-        <div class="shamrock-divider">
-            <span class="shamrock-icon">☘</span>
-        </div>
-    </div>
+    <!-- Section Live et Divider supprimés car gérés différemment ou obsolètes -->
 
     <!-- ═══ HOURS WIDGET ═══ -->
     <section class="section section-dark" id="horaires">
@@ -295,40 +238,19 @@
                 <hr class="gold-line">
             </div>
 
-            <div class="hours-widget reveal" id="hoursWidget">
-                <div class="hours-status">
-                    <div class="dot closed"></div>
-                    <span class="status-text">Chargement…</span>
+            <div class="hours-split reveal">
+                <div class="hours-col">
+                    <h3>🍺 Espace Bar</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: var(--space-md);">
+                        De 19h à minuit, du lundi au vendredi,<br>hors jours fériés et congés universitaires.
+                    </p>
                 </div>
-                <div class="hours-list">
-                    <div class="hours-row">
-                        <span class="day">Lundi</span>
-                        <span class="time">16h00 – 00h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Mardi</span>
-                        <span class="time">16h00 – 00h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Mercredi</span>
-                        <span class="time">16h00 – 00h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Jeudi</span>
-                        <span class="time">16h00 – 01h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Vendredi</span>
-                        <span class="time">16h00 – 02h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Samedi</span>
-                        <span class="time">12h00 – 02h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Dimanche</span>
-                        <span class="time">12h00 – 23h00</span>
-                    </div>
+                <div class="hours-col">
+                    <h3>🍽️ Service Cuisine</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: var(--space-md);">
+                        Petite restauration de 19h00 à 21h30<br>
+                        <em>(réservation souhaitée jusqu'à 18h30 pour le jour-même).</em>
+                    </p>
                 </div>
             </div>
         </div>
@@ -340,19 +262,20 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img logo-img--footer">
+                        <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo"
+                            class="logo-img logo-img--footer">
                     </a>
                     <p>L'authenticité d'un pub irlandais au cœur de Louvain-la-Neuve. Guinness, whiskey et bonne craic
-                        depuis 2024. Sláinte!</p>
+                        depuis 2024.</p>
                 </div>
 
                 <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À Propos</a></li>
                         <li><a href="carte.html">La Carte</a></li>
-                        <li><a href="evenements.html">Événements & Sport</a></li>
-                        <li><a href="privatisation.html">Privatisation</a></li>
+                        <li><a href="reservation.html">Réservation</a></li>
                         <li><a href="contact.html">Contact & Accès</a></li>
                     </ul>
                 </div>
@@ -381,7 +304,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2024 The Blackfriars · Sláinte! ☘</p>
+                <p>© 2024 The Blackfriars</p>
                 <p>L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
             </div>
         </div>
@@ -392,7 +315,7 @@
         <a href="tel:+3210123456" class="btn btn-primary">☎ Appeler</a>
         <a href="https://maps.google.com/?q=The+Blackfriars+Louvain-la-Neuve" target="_blank" rel="noopener"
             class="btn btn-secondary">📍 Y aller</a>
-        <a href="tel:+3210123456" class="btn btn-outline-copper">Réserver</a>
+        <a href="reservation.html" class="btn btn-outline-copper">Réserver</a>
     </div>
 
     <script src="js/main.js"></script>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -13,11 +13,11 @@
         "@context": "https://schema.org",
         "@type": "BarOrPub",
         "name": "The Blackfriars",
-        "telephone": "+32-10-123-456",
-        "email": "contact@theblackfriars.be",
+        "telephone": "+32-472-557-550",
+        "email": "info@blackfriars.pub",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "12 Place de l'Université",
+            "streetAddress": "Rue René Magritte, 7",
             "addressLocality": "Louvain-la-Neuve",
             "postalCode": "1348",
             "addressCountry": "BE"
@@ -53,13 +53,19 @@
             <nav class="nav-desktop" aria-label="Navigation principale">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="a-propos.html" aria-haspopup="true">À Propos ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="a-propos.html">Notre Histoire</a></li>
+                            <li><a href="whisky-academy.html">Blackfriars Whisky Academy</a></li>
+                        </ul>
+                    </li>
                     <li><a href="carte.html">La Carte</a></li>
-                    <li><a href="evenements.html">Événements</a></li>
-                    <li><a href="privatisation.html">Privatisation</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reservation.html">Réservation</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
-            <a href="tel:+3210123456" class="btn btn-primary header-cta">☎ Réserver une table</a>
+            <a href="reservation.html" class="btn btn-primary header-cta">☎ Réserver une table</a>
             <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -67,13 +73,19 @@
     <nav class="nav-mobile" id="mobileNav" aria-label="Navigation mobile">
         <ul>
             <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="a-propos.html">À Propos ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="a-propos.html">Notre Histoire</a></li>
+                    <li><a href="whisky-academy.html">Whisky Academy</a></li>
+                </ul>
+            </li>
             <li><a href="carte.html">La Carte</a></li>
-            <li><a href="evenements.html">Événements</a></li>
-            <li><a href="privatisation.html">Privatisation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <div class="mobile-cta">
-            <a href="tel:+3210123456" class="btn btn-primary btn-lg">☎ Réserver une table</a>
+            <a href="reservation.html" class="btn btn-primary btn-lg">☎ Réserver une table</a>
         </div>
     </nav>
 
@@ -90,27 +102,27 @@
     <section class="section">
         <div class="container">
             <div class="contact-info-grid reveal">
-                <a href="tel:+3210123456" class="contact-card" id="contactPhone">
+                <a href="tel:+32472557550" class="contact-card" id="contactPhone">
                     <div class="contact-card-icon">☎️</div>
                     <div class="contact-card-info">
                         <h3>Appelez-nous</h3>
-                        <p><strong>+32 10 123 456</strong><br>Disponible pendant les heures d'ouverture</p>
+                        <p><strong>+32 (0)472 557 550</strong><br>Disponible pendant les heures d'ouverture</p>
                     </div>
                 </a>
 
-                <a href="mailto:contact@theblackfriars.be" class="contact-card" id="contactEmail">
+                <a href="mailto:info@blackfriars.pub" class="contact-card" id="contactEmail">
                     <div class="contact-card-icon">✉️</div>
                     <div class="contact-card-info">
                         <h3>Écrivez-nous</h3>
-                        <p><strong>contact@theblackfriars.be</strong><br>Réponse sous 24h</p>
+                        <p><strong>info@blackfriars.pub</strong><br>Réponse sous 24h</p>
                     </div>
                 </a>
 
-                <a href="https://maps.google.com/?q=12+Place+de+l'Université+1348+Louvain-la-Neuve" target="_blank" rel="noopener" class="contact-card" id="contactAddress">
+                <a href="https://maps.google.com/?q=Rue+René+Magritte+7+1348+Louvain-la-Neuve" target="_blank" rel="noopener" class="contact-card" id="contactAddress">
                     <div class="contact-card-icon">📍</div>
                     <div class="contact-card-info">
                         <h3>Adresse</h3>
-                        <p><strong>12 Place de l'Université</strong><br>1348 Louvain-la-Neuve, Belgique</p>
+                        <p><strong>Rue René Magritte, 7</strong><br>1348 Louvain-la-Neuve, Belgique</p>
                     </div>
                 </a>
 
@@ -135,7 +147,7 @@
             </div>
 
             <div class="map-container reveal">
-                <iframe
+                <iframe class="dark-map-iframe"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.5!2d4.6118!3d50.6686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQwJzA3LjAiTiA0wrAzNic0Mi41IkU!5e0!3m2!1sfr!2sbe!4v1!5m2!1sfr!2sbe"
                     width="100%"
                     height="100%"
@@ -148,7 +160,7 @@
             </div>
 
             <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;" class="reveal">
-                <a href="https://maps.google.com/?q=12+Place+de+l'Université+1348+Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-primary btn-lg">📍 Ouvrir dans Google Maps</a>
+                <a href="https://maps.google.com/?q=Rue+René+Magritte+7+1348+Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-primary btn-lg">📍 Ouvrir dans Google Maps</a>
                 <a href="https://maps.google.com/maps/dir/?api=1&destination=50.6686,4.6118" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">🧭 Itinéraire</a>
             </div>
         </div>
@@ -162,40 +174,19 @@
                 <h2 class="section-title">Quand nous <span class="accent">retrouver</span></h2>
             </div>
 
-            <div class="hours-widget reveal" id="hoursWidget">
-                <div class="hours-status">
-                    <div class="dot closed"></div>
-                    <span class="status-text">Chargement…</span>
+            <div class="hours-split reveal">
+                <div class="hours-col">
+                    <h3>🍺 Espace Bar</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: var(--space-md);">
+                        De 19h à minuit, du lundi au vendredi,<br>hors jours fériés et congés universitaires.
+                    </p>
                 </div>
-                <div class="hours-list">
-                    <div class="hours-row">
-                        <span class="day">Lundi</span>
-                        <span class="time">16h00 – 00h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Mardi</span>
-                        <span class="time">16h00 – 00h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Mercredi</span>
-                        <span class="time">16h00 – 00h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Jeudi</span>
-                        <span class="time">16h00 – 01h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Vendredi</span>
-                        <span class="time">16h00 – 02h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Samedi</span>
-                        <span class="time">12h00 – 02h00</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Dimanche</span>
-                        <span class="time">12h00 – 23h00</span>
-                    </div>
+                <div class="hours-col">
+                    <h3>🍽️ Service Cuisine</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: var(--space-md);">
+                        Petite restauration de 19h00 à 21h30<br>
+                        <em>(réservation souhaitée jusqu'à 18h30 pour le jour-même).</em>
+                    </p>
                 </div>
             </div>
         </div>
@@ -252,18 +243,18 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À Propos</a></li>
                         <li><a href="carte.html">La Carte</a></li>
-                        <li><a href="evenements.html">Événements & Sport</a></li>
-                        <li><a href="privatisation.html">Privatisation</a></li>
+                        <li><a href="reservation.html">Réservation</a></li>
                         <li><a href="contact.html">Contact & Accès</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="tel:+3210123456">+32 10 123 456</a></li>
-                        <li><a href="mailto:contact@theblackfriars.be">contact@theblackfriars.be</a></li>
-                        <li>12 Place de l'Université</li>
+                        <li><a href="tel:+32472557550">+32 (0)472 557 550</a></li>
+                        <li><a href="mailto:info@blackfriars.pub">info@blackfriars.pub</a></li>
+                        <li>Rue René Magritte, 7</li>
                         <li>1348 Louvain-la-Neuve</li>
                     </ul>
                 </div>
@@ -286,7 +277,7 @@
     <div class="sticky-cta">
         <a href="tel:+3210123456" class="btn btn-primary">☎ Appeler</a>
         <a href="https://maps.google.com/maps/dir/?api=1&destination=50.6686,4.6118" target="_blank" rel="noopener" class="btn btn-secondary">📍 Y aller</a>
-        <a href="tel:+3210123456" class="btn btn-outline-copper">Réserver</a>
+        <a href="reservation.html" class="btn btn-outline-copper">Réserver</a>
     </div>
 
     <script src="js/main.js"></script>

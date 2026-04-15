@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -48,9 +48,15 @@
             <nav class="nav-desktop" aria-label="Navigation principale">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="carte.html">La Carte</a></li>
-                    <li><a href="evenements.html">Événements</a></li>
-                    <li><a href="privatisation.html">Privatisation</a></li>
+                    <li class="dropdown">
+                        <a href="a-propos.html" aria-haspopup="true">À Propos ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="a-propos.html">Notre Histoire</a></li>
+                            <li><a href="whisky-academy.html">Blackfriars Whisky Academy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="carte.html" class="active">La Carte</a></li>
+                    <li><a href="reservation.html">Réservation</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -62,13 +68,19 @@
     <nav class="nav-mobile" id="mobileNav" aria-label="Navigation mobile">
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="carte.html">La Carte</a></li>
-            <li><a href="evenements.html">Événements</a></li>
-            <li><a href="privatisation.html">Privatisation</a></li>
+            <li class="dropdown">
+                <a href="a-propos.html">À Propos ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="a-propos.html">Notre Histoire</a></li>
+                    <li><a href="whisky-academy.html">Whisky Academy</a></li>
+                </ul>
+            </li>
+            <li><a href="carte.html" class="active">La Carte</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="mobile-cta">
-            <a href="tel:+3210123456" class="btn btn-primary btn-lg">☎ Réserver une table</a>
+            <a href="reservation.html" class="btn btn-primary btn-lg">☎ Réserver une table</a>
         </div>
     </nav>
 
@@ -87,15 +99,14 @@
 
             <!-- Tabs -->
             <div class="menu-tabs reveal" role="tablist">
-                <button class="menu-tab active" data-tab="bieres" role="tab" aria-selected="true">🍺 Bières Pression</button>
-                <button class="menu-tab" data-tab="cocktails" role="tab" aria-selected="false">🍸 Cocktails</button>
+                <button class="menu-tab active" data-tab="bieres" role="tab" aria-selected="true">🍺 Bières, Softs & Vins</button>
                 <button class="menu-tab" data-tab="whiskies" role="tab" aria-selected="false">🥃 Whiskies</button>
-                <button class="menu-tab" data-tab="food" role="tab" aria-selected="false">🍔 Food & Snacks</button>
+                <button class="menu-tab" data-tab="food" role="tab" aria-selected="false">🍔 Plats & Snacks</button>
             </div>
 
-            <!-- ── Bières Pression ── -->
+            <!-- ── Bières, Softs & Vins ── -->
             <div class="menu-category active" id="bieres">
-                <h3 class="menu-section-title reveal">Bières Pression — 16 Taps</h3>
+                <h3 class="menu-section-title reveal">Bières, Softs & Vins</h3>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
@@ -355,6 +366,12 @@
                     </div>
                     <div class="menu-item-price">9,00 €</div>
                 </div>
+
+                <div style="text-align: center; margin-top: var(--space-4xl);" class="reveal">
+                    <h3 style="font-family: var(--font-heading); color: var(--color-gold); margin-bottom: var(--space-md);">La Roue des Arômes</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-lg);">Utilisez notre roue des arômes pour affiner votre palais et découvrir de nouveaux profils gustatifs.</p>
+                    <img src="assets/roue-aromes-placeholder.png" alt="Roue des Arômes des Whiskies" style="max-width: 100%; border-radius: var(--radius-md); border: 1px solid var(--color-gold); box-shadow: var(--shadow-gold); margin: 0 auto;">
+                </div>
             </div>
 
             <!-- ── Food & Snacks ── -->
@@ -489,18 +506,18 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À Propos</a></li>
                         <li><a href="carte.html">La Carte</a></li>
-                        <li><a href="evenements.html">Événements & Sport</a></li>
-                        <li><a href="privatisation.html">Privatisation</a></li>
+                        <li><a href="reservation.html">Réservation</a></li>
                         <li><a href="contact.html">Contact & Accès</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="tel:+3210123456">+32 10 123 456</a></li>
-                        <li><a href="mailto:contact@theblackfriars.be">contact@theblackfriars.be</a></li>
-                        <li>12 Place de l'Université</li>
+                        <li><a href="tel:+32472557550">+32 (0)472 557 550</a></li>
+                        <li><a href="mailto:info@blackfriars.pub">info@blackfriars.pub</a></li>
+                        <li>Rue René Magritte, 7</li>
                         <li>1348 Louvain-la-Neuve</li>
                     </ul>
                 </div>
@@ -521,9 +538,9 @@
 
     <!-- Sticky CTA -->
     <div class="sticky-cta">
-        <a href="tel:+3210123456" class="btn btn-primary">☎ Appeler</a>
-        <a href="https://maps.google.com/?q=The+Blackfriars+Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-secondary">📍 Y aller</a>
-        <a href="tel:+3210123456" class="btn btn-outline-copper">Réserver</a>
+        <a href="tel:+32472557550" class="btn btn-primary">☎ Appeler</a>
+        <a href="https://maps.google.com/?q=Rue+René+Magritte+7+1348+Louvain-la-Neuve" target="_blank" rel="noopener" class="btn btn-secondary">📍 Y aller</a>
+        <a href="reservation.html" class="btn btn-outline-copper">Réserver</a>
     </div>
 
     <script src="js/main.js"></script>

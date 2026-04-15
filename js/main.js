@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const hoursWidget = document.getElementById('hoursWidget');
     if (hoursWidget) {
         const schedule = {
-            0: { open: 12, close: 23 },    // Dimanche
-            1: { open: 16, close: 24 },    // Lundi
-            2: { open: 16, close: 24 },    // Mardi
-            3: { open: 16, close: 24 },    // Mercredi
-            4: { open: 16, close: 25 },    // Jeudi (1h AM)
-            5: { open: 16, close: 26 },    // Vendredi (2h AM)
-            6: { open: 12, close: 26 },    // Samedi (2h AM)
+            0: { open: 0, close: 0 },      // Dimanche
+            1: { open: 19, close: 24 },    // Lundi
+            2: { open: 19, close: 24 },    // Mardi
+            3: { open: 19, close: 24 },    // Mercredi
+            4: { open: 19, close: 24 },    // Jeudi
+            5: { open: 19, close: 24 },    // Vendredi
+            6: { open: 0, close: 0 },      // Samedi
         };
 
         const dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
@@ -76,14 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Find next opening
                 let nextDay = dayIndex;
                 let nextSchedule = schedule[nextDay];
-                if (currentHour >= nextSchedule.close || currentHour < nextSchedule.open) {
-                    if (currentHour < nextSchedule.open) {
-                        statusText.textContent = `Fermé • Ouvre aujourd'hui à ${nextSchedule.open}h00`;
-                    } else {
-                        nextDay = (dayIndex + 1) % 7;
+                
+                if (currentHour < nextSchedule.open && nextSchedule.open !== 0) {
+                    statusText.textContent = `Fermé • Ouvre aujourd'hui à ${nextSchedule.open}h00`;
+                } else {
+                    let found = false;
+                    for (let i = 1; i <= 7; i++) {
+                        nextDay = (dayIndex + i) % 7;
                         nextSchedule = schedule[nextDay];
-                        statusText.textContent = `Fermé • Ouvre ${dayNames[nextDay]} à ${nextSchedule.open}h00`;
+                        if (nextSchedule.open !== 0) {
+                            statusText.textContent = `Fermé • Ouvre ${dayNames[nextDay]} à ${nextSchedule.open}h00`;
+                            found = true;
+                            break;
+                        }
                     }
+                    if (!found) statusText.textContent = `Fermé actuellement`;
                 }
             }
 
