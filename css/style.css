@@ -8,11 +8,11 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-    /* Dark Irish Green base */
-    --color-bg:            #0B1812;
-    --color-bg-alt:        #091410;
-    --color-bg-card:       #112218;
-    --color-bg-elevated:   #172E20;
+    /* Dark Irish Green base - légèrement éclairci */
+    --color-bg:            #10221A;
+    --color-bg-alt:        #0D1B14;
+    --color-bg-card:       #162E23;
+    --color-bg-elevated:   #1C3A2C;
 
     /* Irish Green – présent mais pas abusé */
     --color-irish:         #2E8B57;
