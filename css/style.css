@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 50px;
+    height: 36px;
     width: auto;
     object-fit: contain;
     display: block;
@@ -1612,7 +1612,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-bg-elevated);
     border: 1px solid var(--color-border);
     display: flex; align-items: center; justify-content: center;
-    color: var(--color-text-muted);
+    color: #ffffff;
     font-size: 1rem;
     transition: all var(--transition-base);
 }
@@ -2021,6 +2021,18 @@ h1, h2, h3, h4, h5, h6 {
         padding: 1px 5px;
     }
 
+    /* Eviter le décalage horizontal en empilant les infos et prix longs de la carte de whiskies */
+    #whiskies .menu-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+    #whiskies .menu-item-price {
+        align-self: flex-start;
+        margin-top: 2px;
+        white-space: normal;
+    }
+
     /* Adapter la hauteur du hero des sous-pages et taille du titre */
     .page-hero {
         padding: calc(var(--header-h) + var(--space-xl)) 0 var(--space-lg);
@@ -2036,7 +2048,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: var(--space-md) var(--space-sm);
     }
     .hours-row.active-day {
-        margin: 4px -var(--space-sm);
+        margin: 4px calc(-1 * var(--space-sm));
         padding: var(--space-sm) var(--space-sm);
     }
     .hours-row .day-name, 
@@ -2222,6 +2234,8 @@ body { padding-bottom: var(--mobile-bar); }
 .hours-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
     padding: var(--space-sm) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     transition: all var(--transition-fast);
@@ -2240,12 +2254,15 @@ body { padding-bottom: var(--mobile-bar); }
     font-size: 1.05rem;
     font-weight: 500;
     color: var(--color-text);
+    flex-shrink: 0;
 }
 
 .hours-row .day-time {
     font-family: var(--font-body);
     font-size: 1.05rem;
     color: var(--color-text-dim);
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 /* Current Day Highlight */
@@ -2254,7 +2271,7 @@ body { padding-bottom: var(--mobile-bar); }
     background: rgba(212, 175, 55, 0.05);
     border-radius: var(--radius-md);
     padding: var(--space-sm) var(--space-md);
-    margin: 4px -var(--space-md);
+    margin: 4px calc(-1 * var(--space-md));
     box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
 }
 

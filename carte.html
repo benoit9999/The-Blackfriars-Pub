@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Carte – Bières, Cocktails & Food | The Blackfriars</title>
-    <meta name="description" content="Découvrez notre carte : 16 bières pression, cocktails signature, whiskies d'exception et plats british faits maison. Menu interactif The Blackfriars.">
+    <title>La Carte – Bières, Whiskies & Restauration | The Blackfriars</title>
+    <meta name="description" content="Découvrez notre carte complète : bières au fût, sélection de bouteilles, softs, vins, notre immense carte de whiskies (Single Malts, Irish, etc.) et notre restauration.">
     <meta name="theme-color" content="#00402E">
     <link rel="icon" type="image/webp" href="assets/logo.webp">
 
@@ -13,21 +13,21 @@
         "@context": "https://schema.org",
         "@type": "Menu",
         "name": "La Carte – The Blackfriars",
-        "description": "Bières pression, cocktails signature, whiskies et plats british faits maison.",
+        "description": "Bières pression, bouteilles, vins, softs, spiritueux, snacks et plats maison.",
         "hasMenuSection": [
             {
                 "@type": "MenuSection",
-                "name": "Bières Pression",
+                "name": "Bières au fût",
                 "hasMenuItem": [
-                    {"@type": "MenuItem", "name": "London Pride", "description": "Amber ale iconique, notes de caramel et houblon floral", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "EUR"}},
-                    {"@type": "MenuItem", "name": "Guinness Draught", "description": "La mythique stout irlandaise, crémeuse et torréfiée", "offers": {"@type": "Offer", "price": "6.00", "priceCurrency": "EUR"}}
+                    {"@type": "MenuItem", "name": "Guinness (pinte)", "offers": {"@type": "Offer", "price": "7.40", "priceCurrency": "EUR"}},
+                    {"@type": "MenuItem", "name": "Trappe Quadruple", "offers": {"@type": "Offer", "price": "4.70", "priceCurrency": "EUR"}}
                 ]
             },
             {
                 "@type": "MenuSection",
-                "name": "Cocktails",
+                "name": "Plats",
                 "hasMenuItem": [
-                    {"@type": "MenuItem", "name": "Blackfriars Old Fashioned", "description": "Bourbon, sucre de canne, angostura, orange zest", "offers": {"@type": "Offer", "price": "12.00", "priceCurrency": "EUR"}}
+                    {"@type": "MenuItem", "name": "Fish and chips", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "EUR"}}
                 ]
             }
         ]
@@ -42,24 +42,18 @@
     <header class="site-header" id="siteHeader">
         <div class="header-inner">
             <a href="index.html" class="logo" aria-label="The Blackfriars – Accueil">
-                <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img">
+                <img src="assets/logo-long.png" alt="The Blackfriars – Irish Pub Logo" class="logo-img">
             </a>
             <nav class="nav-desktop" aria-label="Navigation principale">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li class="dropdown">
-                        <a href="a-propos.html" aria-haspopup="true">À Propos ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="a-propos.html">Notre Histoire</a></li>
-                            <li><a href="whisky-academy.html">Blackfriars Whisky Academy</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="a-propos.html">À Propos</a></li>
                     <li><a href="carte.html" class="active">La Carte</a></li>
                     <li><a href="reservation.html">Réservation</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <a href="tel:+3210123456" class="btn btn-primary header-cta">☎ Réserver une table</a>
+            <a href="reservation.html" class="btn btn-primary header-cta">☎ Réserver une table</a>
             <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -67,13 +61,7 @@
     <nav class="nav-mobile" id="mobileNav" aria-label="Navigation mobile">
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li class="dropdown">
-                <a href="a-propos.html">À Propos ▾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="a-propos.html">Notre Histoire</a></li>
-                    <li><a href="whisky-academy.html">Whisky Academy</a></li>
-                </ul>
-            </li>
+            <li><a href="a-propos.html">À Propos</a></li>
             <li><a href="carte.html" class="active">La Carte</a></li>
             <li><a href="reservation.html">Réservation</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -86,9 +74,9 @@
     <!-- ═══ PAGE HERO ═══ -->
     <section class="page-hero">
         <div class="container">
-            <span class="section-label">Notre Carte</span>
-            <h1>Bières, Cocktails <span class="accent">& Bonne Chair</span></h1>
-            <p>Des bières tirées avec soin, des cocktails pensés avec passion et une cuisine british généreuse.</p>
+            <span class="section-label">Sélection & Convivialité</span>
+            <h1>Bières, Softs <span class="accent">& Restauration</span></h1>
+            <p>Une large gamme de bières locales et d'importation, des snacks conviviaux et des plats réconfortants.</p>
         </div>
     </section>
 
@@ -105,268 +93,1122 @@
 
             <!-- ── Bières, Softs & Vins ── -->
             <div class="menu-category active" id="bieres">
-                <h3 class="menu-section-title reveal">Bières, Softs & Vins</h3>
+                
+                <!-- Section Au Fût -->
+                <h3 class="menu-section-title reveal">Au Fût (Draft)</h3>
+                
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Guinness (pinte) <span class="menu-item-badge">Incontournable</span></div>
+                        <div class="menu-item-desc">La légendaire stout irlandaise, crémeuse et obscure.</div>
+                    </div>
+                    <div class="menu-item-price">7,40 €</div>
+                </div>
+                
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Guinness (½ pinte)</div>
+                        <div class="menu-item-desc">Le format demi de notre stout irlandaise.</div>
+                    </div>
+                    <div class="menu-item-price">3,80 €</div>
+                </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">London Pride <span class="menu-item-badge">Classique</span></div>
-                        <div class="menu-item-desc">Amber ale iconique de Fuller's. Notes de caramel, biscuit et houblon floral. 4.7% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Brewdog Punk IPA (pinte)</div>
+                        <div class="menu-item-desc">IPA écossaise post-moderne aux notes d'agrumes et de fruits tropicaux.</div>
+                    </div>
+                    <div class="menu-item-price">7,20 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Brewdog Punk IPA (½ pinte)</div>
+                        <div class="menu-item-desc">Le format demi de la Punk IPA de Brewdog.</div>
+                    </div>
+                    <div class="menu-item-price">3,80 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Trappe Quadruple</div>
+                        <div class="menu-item-desc">Bière trappiste néerlandaise, riche, chaleureuse et intensément maltée.</div>
+                    </div>
+                    <div class="menu-item-price">4,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Sanctus Dominicus Prior (blonde) <span class="menu-item-badge">Dominicaine</span></div>
+                        <div class="menu-item-desc">Bière de l'Ordre des Dominicains, robe dorée aux notes épicées et de miel.</div>
+                    </div>
+                    <div class="menu-item-price">4,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bourgogne des Flandres (25cl)</div>
+                        <div class="menu-item-desc">Bière brune de fermentation mixte aux arômes boisés et acidulés.</div>
+                    </div>
+                    <div class="menu-item-price">3,60 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cidre celtique (pinte)</div>
+                        <div class="menu-item-desc">Cidre breton traditionnel, désaltérant et finement fruité.</div>
+                    </div>
+                    <div class="menu-item-price">6,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cidre celtique (½ pinte)</div>
+                        <div class="menu-item-desc">Le demi de notre cidre breton authentique.</div>
+                    </div>
+                    <div class="menu-item-price">3,40 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍺</span></div>
+
+                <!-- Section Bières en bouteille -->
+                <h3 class="menu-section-title reveal">Bières en Bouteille</h3>
+                
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chimay Blanche</div>
+                        <div class="menu-item-desc">Trappiste belge, amertume rafraîchissante et nez fruité.</div>
+                    </div>
+                    <div class="menu-item-price">4,30 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chimay Rouge</div>
+                        <div class="menu-item-desc">Bière trappiste ambrée à l'arôme de abricot et de caramel.</div>
+                    </div>
+                    <div class="menu-item-price">3,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chimay Bleue</div>
+                        <div class="menu-item-desc">La plus puissante des trappistes de Chimay, arômes chocolatés et caramélisés.</div>
+                    </div>
+                    <div class="menu-item-price">4,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Fugu : Fugushima</div>
+                        <div class="menu-item-desc">Bière locale originale et pleine de caractère de la brasserie Fugu.</div>
+                    </div>
+                    <div class="menu-item-price">5,10 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Fugu : Hop Circles</div>
+                        <div class="menu-item-desc">Bière locale au profil houblonné intense de la gamme Fugu.</div>
                     </div>
                     <div class="menu-item-price">5,50 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Guinness Draught <span class="menu-item-badge">Incontournable</span></div>
-                        <div class="menu-item-desc">La mythique stout irlandaise. Crémeuse, torréfiée, avec des notes de café et de chocolat noir. 4.2% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Fugu : Squizz</div>
+                        <div class="menu-item-desc">Bière locale légère et fruitée, brassée à Louvain-la-Neuve.</div>
                     </div>
-                    <div class="menu-item-price">6,00 €</div>
+                    <div class="menu-item-price">5,10 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Neck Oil IPA</div>
-                        <div class="menu-item-desc">Session IPA de Beavertown. Agrumes, résine de pin et finale sèche rafraîchissante. 4.3% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Gordon Scotch</div>
+                        <div class="menu-item-desc">Bière scotch ale belge historique, douce et chaleureuse.</div>
                     </div>
-                    <div class="menu-item-price">6,50 €</div>
+                    <div class="menu-item-price">3,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Doom Bar</div>
-                        <div class="menu-item-desc">Amber ale de Sharp's Brewery. Équilibrée, maltée, avec une touche d'amertume finement résinée. 4.3% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Gueuze Boon à l'ancienne</div>
+                        <div class="menu-item-desc">Lambic traditionnel belge aux notes acidulées et finement boisées.</div>
+                    </div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jambe de Bois</div>
+                        <div class="menu-item-desc">Bière triple généreuse de la Brasserie de la Senne.</div>
+                    </div>
+                    <div class="menu-item-price">4,80 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Monk's Stout Dupont</div>
+                        <div class="menu-item-desc">Stout belge classique, sec, malté et torréfié.</div>
+                    </div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Orval</div>
+                        <div class="menu-item-desc">Bière trappiste mythique au goût sauvage et complexe (fermentation haute et sauvage).</div>
+                    </div>
+                    <div class="menu-item-price">4,90 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Redor Pils Dupont</div>
+                        <div class="menu-item-desc">Une pils de fermentation basse, légère et à l'amertume fine.</div>
+                    </div>
+                    <div class="menu-item-price">2,60 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Rochefort 8</div>
+                        <div class="menu-item-desc">Bière trappiste brune de l'Abbaye de Saint-Rémy.</div>
+                    </div>
+                    <div class="menu-item-price">4,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Rochefort 10</div>
+                        <div class="menu-item-desc">Trappiste brune intense et complexe, notes de pruneau et de chocolat.</div>
                     </div>
                     <div class="menu-item-price">5,50 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Old Speckled Hen</div>
-                        <div class="menu-item-desc">English pale ale riche et fruitée. Malts toffee, notes de pomme et finale douce. 5.0% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Saint Hubertus Blanche</div>
+                        <div class="menu-item-desc">Bière blanche d'abbaye rafraîchissante aux écorces d'orange.</div>
                     </div>
-                    <div class="menu-item-price">5,80 €</div>
+                    <div class="menu-item-price">4,30 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Camden Hells Lager</div>
-                        <div class="menu-item-desc">Lager londonienne, propre et vive. Houblons allemands, finale nette et désaltérante. 4.6% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Saint Hubertus Triple Hop Citra</div>
+                        <div class="menu-item-desc">Bière triple d'abbaye avec houblonnage à cru au houblon Citra.</div>
                     </div>
-                    <div class="menu-item-price">5,50 €</div>
+                    <div class="menu-item-price">4,40 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">BrewDog Punk IPA</div>
-                        <div class="menu-item-desc">IPA post-punk, explosif de fruits tropicaux, pamplemousse et amertume affirmée. 5.4% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Sanctus Dominicus Novitius (blanche)</div>
+                        <div class="menu-item-desc">Bière blanche des Dominicains, légèrement acidulée aux notes d'agrumes.</div>
                     </div>
-                    <div class="menu-item-price">6,50 €</div>
+                    <div class="menu-item-price">4,70 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Timothy Taylor's Landlord</div>
-                        <div class="menu-item-desc">Pale ale primée, tout en délicatesse. Houblon Styrian Golding, notes de citron et pêche. 4.3% ABV</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Sanctus Dominicus Prior (brune)</div>
+                        <div class="menu-item-desc">Bière brune d'abbaye dense aux arômes de malt torréfié.</div>
                     </div>
-                    <div class="menu-item-price">6,00 €</div>
-                </div>
-
-                <div class="divider"><span class="divider-icon">🍻</span></div>
-
-                <p style="text-align:center; color: var(--color-text-muted); font-size: 0.85rem;">+ 8 autres sélections rotatives. Demandez au bar pour la carte complète du jour.</p>
-            </div>
-
-            <!-- ── Cocktails ── -->
-            <div class="menu-category" id="cocktails">
-                <h3 class="menu-section-title reveal">Cocktails Signature</h3>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Blackfriars Old Fashioned <span class="menu-item-badge">Signature</span></div>
-                        <div class="menu-item-desc">Bourbon Woodford Reserve, sucre de canne brûlé, angostura bitters, zeste d'orange flambé.</div>
-                    </div>
-                    <div class="menu-item-price">12,00 €</div>
+                    <div class="menu-item-price">4,70 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">The Friar's Mule <span class="menu-item-badge">Signature</span></div>
-                        <div class="menu-item-desc">Vodka premium, ginger beer artisanale, citron vert pressé, feuilles de menthe fraîche.</div>
+                        <div class="menu-item-name">Sanctus Dominicus Regens (IPA ambrée)</div>
+                        <div class="menu-item-desc">IPA ambrée celtique à l'amertume franche et arômes de fruits tropicaux.</div>
                     </div>
-                    <div class="menu-item-price">11,00 €</div>
+                    <div class="menu-item-price">4,70 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">London Sour</div>
-                        <div class="menu-item-desc">Gin londonien, jus de citron, sirop de lavande, blanc d'œuf, dash de bitter aromatique.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Œuf">🥚</span>
-                        </div>
+                        <div class="menu-item-name">Stouterik</div>
+                        <div class="menu-item-desc">Stout bruxellois léger et de caractère par la brasserie de la Senne.</div>
                     </div>
-                    <div class="menu-item-price">12,00 €</div>
+                    <div class="menu-item-price">4,80 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Espresso Martini</div>
-                        <div class="menu-item-desc">Vodka, Kahlúa, espresso fraîchement tiré, sirop de vanille. Secoué, pas remué.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                        </div>
+                        <div class="menu-item-name">Timmermans Kriek Lambic</div>
+                        <div class="menu-item-desc">Gueuze fruitée à la cerise, goût authentiquement lambic.</div>
                     </div>
-                    <div class="menu-item-price">13,00 €</div>
+                    <div class="menu-item-price">4,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Peaky Blinder</div>
-                        <div class="menu-item-desc">Irish whiskey, amaro, miel de bruyère, bitter orange, fumé au bois de chêne.</div>
+                        <div class="menu-item-name">Timmermans Framboise Lambic</div>
+                        <div class="menu-item-desc">Lambic fruité brassé à base de framboises fraîches.</div>
                     </div>
-                    <div class="menu-item-price">14,00 €</div>
+                    <div class="menu-item-price">4,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Pimm's Cup</div>
-                        <div class="menu-item-desc">Pimm's No.1, limonade maison, concombre, menthe, fraises fraîches et orange.</div>
+                        <div class="menu-item-name">Timmermans Pêche Lambic</div>
+                        <div class="menu-item-desc">Bière lambic douce et parfumée à la pêche.</div>
                     </div>
-                    <div class="menu-item-price">10,00 €</div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Valduc Rio</div>
+                        <div class="menu-item-desc">Bière blonde de la brasserie artisanale coopérative Valduc.</div>
+                    </div>
+                    <div class="menu-item-price">5,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Valduc Thor</div>
+                        <div class="menu-item-desc">Bière brune forte et généreuse brassée localement.</div>
+                    </div>
+                    <div class="menu-item-price">5,30 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Waterloo Red Sherry</div>
+                        <div class="menu-item-desc">Bière rouge puissante aux arômes de cerise griotte et extrait de sherry.</div>
+                    </div>
+                    <div class="menu-item-price">4,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Westmalle Double</div>
+                        <div class="menu-item-desc">Trappiste brune historique, douce en bouche aux notes de banane mûre.</div>
+                    </div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Westmalle Triple</div>
+                        <div class="menu-item-desc">La « mère de toutes les triples », bière trappiste blonde, sèche et fruitée.</div>
+                    </div>
+                    <div class="menu-item-price">4,50 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍺</span></div>
+
+                <!-- Section Bières invitées -->
+                <h3 class="menu-section-title reveal">Bières "Invitées" en Bouteille</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">NA Dorst (sans alcool)</div>
+                        <div class="menu-item-desc">Bière de caractère, brassée sans alcool pour le plaisir de tous.</div>
+                    </div>
+                    <div class="menu-item-price">4,70 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍷</span></div>
+
+                <!-- Section Vins -->
+                <h3 class="menu-section-title reveal">Vins</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Verre de vin blanc</div>
+                        <div class="menu-item-desc">Une sélection fraîche de notre cave.</div>
+                    </div>
+                    <div class="menu-item-price">3,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Verre de vin rosé</div>
+                        <div class="menu-item-desc">Rosé sec, idéal pour l'apéritif.</div>
+                    </div>
+                    <div class="menu-item-price">3,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Verre de vin rouge</div>
+                        <div class="menu-item-desc">Vin rouge rond et chaleureux.</div>
+                    </div>
+                    <div class="menu-item-price">3,50 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🥤</span></div>
+
+                <!-- Section Softs -->
+                <h3 class="menu-section-title reveal">Softs</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cécémel</div>
+                    </div>
+                    <div class="menu-item-price">2,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Coca-Cola</div>
+                    </div>
+                    <div class="menu-item-price">2,30 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Coca Zéro</div>
+                    </div>
+                    <div class="menu-item-price">2,30 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Eau Chaudfontaine gazeuze</div>
+                    </div>
+                    <div class="menu-item-price">2,40 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Eau Chaudfontaine plate</div>
+                    </div>
+                    <div class="menu-item-price">2,40 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Fanta</div>
+                    </div>
+                    <div class="menu-item-price">2,40 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jus Looza Ace Original</div>
+                    </div>
+                    <div class="menu-item-price">2,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jus Looza Orange</div>
+                    </div>
+                    <div class="menu-item-price">2,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jus Looza Pomme</div>
+                    </div>
+                    <div class="menu-item-price">2,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jus Looza Tomate</div>
+                    </div>
+                    <div class="menu-item-price">2,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Lipton Ice Tea</div>
+                    </div>
+                    <div class="menu-item-price">2,70 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Schweppes Agrumes</div>
+                    </div>
+                    <div class="menu-item-price">2,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Schweppes Tonic</div>
+                    </div>
+                    <div class="menu-item-price">2,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Sprite</div>
+                    </div>
+                    <div class="menu-item-price">2,40 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">☕</span></div>
+
+                <!-- Section Boissons Chaudes -->
+                <h3 class="menu-section-title reveal">Boissons Chaudes</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Café / Déca</div>
+                    </div>
+                    <div class="menu-item-price">2,40 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chocolat chaud</div>
+                    </div>
+                    <div class="menu-item-price">4,20 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Irish Coffee</div>
+                        <div class="menu-item-desc">Whiskey, café noir, sucre de canne et crème fraîche fouettée.</div>
+                    </div>
+                    <div class="menu-item-price">8,50 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Thé</div>
+                    </div>
+                    <div class="menu-item-price">2,40 €</div>
                 </div>
 
                 <div class="divider"><span class="divider-icon">🍸</span></div>
 
-                <h3 class="menu-section-title reveal">Classiques</h3>
+                <!-- Section Alcool divers -->
+                <h3 class="menu-section-title reveal">Alcools Divers</h3>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Gin & Tonic Premium</div>
-                        <div class="menu-item-desc">Choix parmi notre sélection de 8 gins + Fever-Tree tonics. Garniture assortie.</div>
-                    </div>
-                    <div class="menu-item-price">10,00 €</div>
-                </div>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Mojito</div>
-                        <div class="menu-item-desc">Rhum cubain, menthe fraîche, citron vert, sucre de canne, eau pétillante.</div>
-                    </div>
-                    <div class="menu-item-price">10,00 €</div>
-                </div>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Whisky Sour</div>
-                        <div class="menu-item-desc">Bourbon, jus de citron, sirop de sucre, blanc d'œuf, cerise Amarena.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Œuf">🥚</span>
-                        </div>
-                    </div>
-                    <div class="menu-item-price">11,00 €</div>
-                </div>
-            </div>
-
-            <!-- ── Whiskies ── -->
-            <div class="menu-category" id="whiskies">
-                <h3 class="menu-section-title reveal">Scotch Single Malt</h3>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Glenfiddich 12 <span class="menu-item-badge">Speyside</span></div>
-                        <div class="menu-item-desc">Notes de poire fraîche, chêne subtil et touche crémeuse. Accessible et élégant.</div>
+                        <div class="menu-item-name">An Dulaman Gin</div>
+                        <div class="menu-item-desc">Irish Maritime Gin, distillé avec cinq algues locales.</div>
                     </div>
                     <div class="menu-item-price">8,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Talisker 10 <span class="menu-item-badge">Isle of Skye</span></div>
-                        <div class="menu-item-desc">Maritime et poivré. Fumée de tourbe, sel marin, finale longue et épicée.</div>
-                    </div>
-                    <div class="menu-item-price">10,00 €</div>
-                </div>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Lagavulin 16 <span class="menu-item-badge">Islay</span></div>
-                        <div class="menu-item-desc">Intense, tourbé, avec des notes de fumée douce, sherry et fruits secs. Légendaire.</div>
-                    </div>
-                    <div class="menu-item-price">14,00 €</div>
-                </div>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Macallan 18 Sherry Oak <span class="menu-item-badge">Premium</span></div>
-                        <div class="menu-item-desc">Exceptionnel. Fruits secs, épices de Noël, chocolat, miel et finale interminable.</div>
-                    </div>
-                    <div class="menu-item-price">28,00 €</div>
-                </div>
-
-                <div class="divider"><span class="divider-icon">🥃</span></div>
-
-                <h3 class="menu-section-title reveal">Irish Whiskey</h3>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Jameson Original</div>
-                        <div class="menu-item-desc">Triple distillé, doux et accessible. Vanille, noisette et touche de sherry.</div>
+                        <div class="menu-item-name">Assaranca Vodka</div>
+                        <div class="menu-item-desc">Vodka irlandaise distillée avec de l'ajonc sauvage.</div>
                     </div>
                     <div class="menu-item-price">7,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Redbreast 12</div>
-                        <div class="menu-item-desc">Single pot still somptueux. Fruits confits, noix, crème et finale épicée complexe.</div>
+                        <div class="menu-item-name">Baileys</div>
                     </div>
-                    <div class="menu-item-price">12,00 €</div>
-                </div>
-
-                <div class="divider"><span class="divider-icon">🥃</span></div>
-
-                <h3 class="menu-section-title reveal">Bourbon & Rye</h3>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Woodford Reserve</div>
-                        <div class="menu-item-desc">Kentucky bourbon premium. Caramel, vanille, orange confite et épices douces.</div>
-                    </div>
-                    <div class="menu-item-price">9,00 €</div>
+                    <div class="menu-item-price">4,50 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Bulleit Rye</div>
-                        <div class="menu-item-desc">Rye whiskey audacieux. Seigle prononcé, cerises noires, poivre et chêne toasté.</div>
+                        <div class="menu-item-name">Chartreuse verte (verre)</div>
                     </div>
-                    <div class="menu-item-price">9,00 €</div>
+                    <div class="menu-item-price">7,50 €</div>
                 </div>
 
-                <div class="aroma-section reveal" style="margin-top: var(--space-4xl); text-align: center;">
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chartreuse verte (shot)</div>
+                    </div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cointreau</div>
+                    </div>
+                    <div class="menu-item-price">6,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Martini Bianco</div>
+                    </div>
+                    <div class="menu-item-price">5,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Martini Rosso</div>
+                    </div>
+                    <div class="menu-item-price">5,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Porto</div>
+                    </div>
+                    <div class="menu-item-price">5,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Pineau des Charentes</div>
+                    </div>
+                    <div class="menu-item-price">4,20 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Ricard</div>
+                    </div>
+                    <div class="menu-item-price">5,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Rhum Great Dane 5 ans</div>
+                        <div class="menu-item-desc">Rhum de tradition, vieilli en fûts de chêne.</div>
+                    </div>
+                    <div class="menu-item-price">5,00 € (2,5cl) / 8,50 € (5,0cl)</div>
+                </div>
+
+            </div>
+
+            <!-- ── Whiskies ── -->
+            <div class="menu-category" id="whiskies">
+                
+                <div style="text-align: center; margin-bottom: var(--space-xl);" class="reveal">
+                    <h3 class="menu-section-title" style="margin-bottom: 5px;">Notre Sélection de Whiskies</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">Tarifs indiqués pour des contenances de 2,5cl et 5,0cl (dose pleine).</p>
+                    <div style="margin-top: 15px;">
+                        <a href="#aromaWheelSection" class="btn btn-outline-copper btn-sm" style="display: inline-flex; align-items: center; gap: 8px;">
+                            🎯 Aller à la Roue des Arômes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Scotch Single Malts -->
+                <h4 style="color: var(--color-gold); font-family: var(--font-heading); font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 5px; margin-top: var(--space-xl); margin-bottom: var(--space-md);" class="reveal">Scotch Single Malts</h4>
+
+                <!-- Lowlands -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-md); margin-bottom: var(--space-sm);" class="reveal">THE LOWLANDS</h5>
+                
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Auchentoshan 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenkinchie 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,50 € (5,0cl)</div>
+                </div>
+
+                <!-- Highlands -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-xl); margin-bottom: var(--space-sm);" class="reveal">THE HIGHLANDS</h5>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Clynelish 14 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Dalmore (The) 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">7,00 € (2,5cl) / 13,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Dalwhinnie 15 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Edradour 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glendronach « Original » 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glengoyne 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenmorangie « Nectar d’Or » 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">7,50 € (2,5cl) / 14,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Oban 14 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,50 € (2,5cl) / 12,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Royal Lochnagar 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tomatin Port Cask Finish 14 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">7,50 € (2,5cl) / 14,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tullibardine 228 Burgundy Finish <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tullibardine 500 Sherry Finish <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,50 € (5,0cl)</div>
+                </div>
+
+                <!-- Speyside -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-xl); margin-bottom: var(--space-sm);" class="reveal">SPEYSIDE</h5>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Aberlour 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Aberlour 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Aberlour 16 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,50 € (2,5cl) / 12,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Balvenie (The) « Double Wood » 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cardhu « Amber Rock » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Cragganmore 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenallachie « Cask Strength » 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">57,10% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">7,50 € (2,5cl) / 14,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenfarclas 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenfarclas 15 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">7,00 € (2,5cl) / 13,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenlivet (The) 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Glenlivet (The) 18 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">10,00 € (2,5cl) / 19,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Knockando 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Speyburn 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tamdhu 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <!-- Islay -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-xl); margin-bottom: var(--space-sm);" class="reveal">ISLAY</h5>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Ardbeg 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bowmore 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bowmore 15 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">8,00 € (2,5cl) / 15,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bunnahabhain 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46,3% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,50 € (2,5cl) / 12,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Caol Ila 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">43% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Islay Storm <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Lagavulin 8 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">48% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Laphroaig 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Laphroaig « Quarter Cask » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 48% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <!-- Islands -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-xl); margin-bottom: var(--space-sm);" class="reveal">ISLANDS</h5>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Arran « The Bodega » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 55,8% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,50 € (2,5cl) / 12,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jura 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Ledaig 10 (Mull) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46,3% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Highland Park 12 (Orkney) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Talisker 10 (Skye) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">45,8% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Talisker « Port Ruighe » (Skye) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 45,8% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <!-- Scotch Blends -->
+                <h4 style="color: var(--color-gold); font-family: var(--font-heading); font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 5px; margin-top: var(--space-2xl); margin-bottom: var(--space-md);" class="reveal">Scotch Blends</h4>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Chivas 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Compass Box « Spice Tree » (blended malt) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Compass Box « Orchard House » (blended malt) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">James Eadie’s Trade Mark X <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 45,6% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Monkey Shoulder (blended malt) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Pigs Nose <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,00 € (5,0cl)</div>
+                </div>
+
+                <!-- Irish Whiskeys -->
+                <h4 style="color: var(--color-gold); font-family: var(--font-heading); font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 5px; margin-top: var(--space-2xl); margin-bottom: var(--space-md);" class="reveal">Irish Whiskeys</h4>
+
+                <!-- Single Malts & Pot Still -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-md); margin-bottom: var(--space-sm);" class="reveal">SINGLE MALTS & SINGLE POT STILLS</h5>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bushmills 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Green Spot <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Redbreast 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Teeling « Single Malt » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tipperary « Knockmealdowns » 10 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">47% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">8,00 € (2,5cl) / 15,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tipperary « Watershed » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 47% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,00 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Yellow Spot 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">8,50 € (2,5cl) / 16,50 € (5,0cl)</div>
+                </div>
+
+                <!-- Blends -->
+                <h5 style="color: var(--color-irish-light); font-family: var(--font-body); font-size: 1rem; margin-top: var(--space-xl); margin-bottom: var(--space-sm);" class="reveal">BLENDS</h5>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Bushmills « Black Bush » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">James Eadie’s Trade Mark X <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 45,60% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jameson <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">3,00 € (2,5cl) / 6,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jameson « Caskmates Stout Edition » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Jameson « Black Barrel » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 9,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Pig’s Nose <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 8,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Sliabh Liag « The Legendary Silkie » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 7,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Sliabh Liag « The Legendary Dark Silkie » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Sliabh Liag « Midnight Silkie » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Tullamore D.E.W. 12 <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">40% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,00 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Writer’s Tears « Copper Pot » <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">4,50 € (2,5cl) / 8,00 € (5,0cl)</div>
+                </div>
+
+                <!-- Whiskies du monde -->
+                <h4 style="color: var(--color-gold); font-family: var(--font-heading); font-size: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 5px; margin-top: var(--space-2xl); margin-bottom: var(--space-md);" class="reveal">Whiskies du Monde</h4>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Gouden Carolus (Belgique) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 46% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">5,50 € (2,5cl) / 10,50 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Nikka « from the Barrel » (Japon) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 51,4% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,00 € (2,5cl) / 11,00 € (5,0cl)</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Wild Turkey « Rare Breed » (Bourbon, U.S.A. Kentucky) <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: normal; margin-left: 10px;">N.A.S. • 56,4% ABV</span></div>
+                    </div>
+                    <div class="menu-item-price" style="font-size: 0.95rem;">6,50 € (2,5cl) / 12,50 € (5,0cl)</div>
+                </div>
+
+                <!-- Aroma Wheel Section -->
+                <div class="aroma-section reveal" id="aromaWheelSection" style="margin-top: var(--space-4xl); text-align: center;">
                     <h3 style="font-family: var(--font-heading); color: var(--color-gold); margin-bottom: var(--space-sm); font-size: 1.8rem;">La Roue des Arômes Interactive</h3>
                     <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
                         Cliquez sur une catégorie ou faites tourner la roue pour explorer la richesse et la complexité aromatique de nos whiskies.
@@ -397,116 +1239,138 @@
 
             <!-- ── Food & Snacks ── -->
             <div class="menu-category" id="food">
-                <h3 class="menu-section-title reveal">Plats — Kitchen</h3>
+                
+                <!-- Section Snacks -->
+                <h3 class="menu-section-title reveal">Snacks & Partage</h3>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">The Blackfriars Burger <span class="menu-item-badge">Maison ★</span></div>
-                        <div class="menu-item-desc">200g de bœuf Black Angus, cheddar affiné, bacon fumé, pickles maison, sauce Blackfriars. Servi avec frites croustillantes.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                            <span class="allergen-icon" title="Moutarde">🟡</span>
-                        </div>
+                        <div class="menu-item-name">Portion fromage</div>
+                        <div class="menu-item-desc">Sélection de cubes de fromages locaux, moutarde et épices.</div>
                     </div>
-                    <div class="menu-item-price">16,50 €</div>
+                    <div class="menu-item-price">4,80 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Fish & Chips <span class="menu-item-badge">Maison ★</span></div>
-                        <div class="menu-item-desc">Cabillaud en pâte à la bière, frites épaisses, purée de petits pois, sauce tartare maison et quartier de citron.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                            <span class="allergen-icon" title="Poisson">🐟</span>
-                            <span class="allergen-icon" title="Œuf">🥚</span>
-                        </div>
+                        <div class="menu-item-name">Portion saucisson</div>
+                        <div class="menu-item-desc">Tranches fines de saucisson sec de qualité.</div>
                     </div>
-                    <div class="menu-item-price">15,00 €</div>
+                    <div class="menu-item-price">4,80 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Shepherd's Pie</div>
-                        <div class="menu-item-desc">Hachis d'agneau mijoté aux légumes, croûte de purée gratinée au cheddar. Comfort food à la britannique.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                        </div>
+                        <div class="menu-item-name">Portion olives</div>
+                        <div class="menu-item-desc">Olives marinées aux herbes de Provence.</div>
+                    </div>
+                    <div class="menu-item-price">4,80 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Assiette mixte <span class="menu-item-badge">Populaire</span></div>
+                        <div class="menu-item-desc">Un assortiment généreux de charcuteries, fromages et olives à partager.</div>
+                    </div>
+                    <div class="menu-item-price">8,00 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍔</span></div>
+
+                <!-- Section Plats -->
+                <h3 class="menu-section-title reveal">Plats</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Boulets à la liégeoise</div>
+                        <div class="menu-item-desc">Boulettes de viande traditionnelles servies avec leur fameuse sauce sucrée au sirop de Liège, accompagnées de frites.</div>
                     </div>
                     <div class="menu-item-price">14,50 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Bangers & Mash</div>
-                        <div class="menu-item-desc">Saucisses artisanales de Cumberland, purée onctueuse, oignons caramélisés et gravy maison.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                        </div>
+                        <div class="menu-item-name">Boulettes sauce tomate</div>
+                        <div class="menu-item-desc">Délicieuses boulettes mijotées dans une sauce tomate maison aux herbes, accompagnées de frites.</div>
                     </div>
-                    <div class="menu-item-price">13,50 €</div>
-                </div>
-
-                <div class="divider"><span class="divider-icon">🍟</span></div>
-
-                <h3 class="menu-section-title reveal">Snacks & Sharing</h3>
-
-                <div class="menu-item reveal">
-                    <div class="menu-item-info">
-                        <div class="menu-item-name">Scotch Eggs (x2) <span class="menu-item-badge">Maison ★</span></div>
-                        <div class="menu-item-desc">Œufs mollets enrobés de chair à saucisse et panés, servis avec chutney de tomates vertes.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                            <span class="allergen-icon" title="Œuf">🥚</span>
-                        </div>
-                    </div>
-                    <div class="menu-item-price">8,50 €</div>
+                    <div class="menu-item-price">14,50 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Loaded Nachos</div>
-                        <div class="menu-item-desc">Tortillas croustillantes, cheddar fondu, jalapeños, guacamole, sour cream et salsa.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                        </div>
+                        <div class="menu-item-name">Chili con carne (tortilla chips ou frites)</div>
+                        <div class="menu-item-desc">Ragoût épicé de bœuf et haricots rouges mijotés. Choisissez votre accompagnement.</div>
                     </div>
-                    <div class="menu-item-price">9,50 €</div>
+                    <div class="menu-item-price">14,50 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Chicken Wings (8 pcs)</div>
-                        <div class="menu-item-desc">Ailes de poulet croustillantes. Choix : BBQ fumé, Buffalo hot ou Honey Mustard. Servi avec dip blue cheese.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                            <span class="allergen-icon" title="Moutarde">🟡</span>
-                        </div>
+                        <div class="menu-item-name">Chicken wings</div>
+                        <div class="menu-item-desc">Ailes de poulet marinées et dorées au four, servies avec sauce d'accompagnement et frites.</div>
                     </div>
-                    <div class="menu-item-price">10,50 €</div>
+                    <div class="menu-item-price">13,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Cheese Board</div>
-                        <div class="menu-item-desc">Sélection de fromages britanniques affinés (Stilton, Cheddar, Red Leicester), crackers, chutney et raisins.</div>
-                        <div class="menu-item-allergens">
-                            <span class="allergen-icon" title="Lait">🥛</span>
-                            <span class="allergen-icon" title="Gluten">🌾</span>
-                        </div>
+                        <div class="menu-item-name">Fish and chips <span class="menu-item-badge">Maison ★</span></div>
+                        <div class="menu-item-desc">Filet de cabillaud frais pané dans une pâte croustillante à la bière, servi avec frites épaisses et sauce tartare.</div>
                     </div>
-                    <div class="menu-item-price">14,00 €</div>
+                    <div class="menu-item-price">16,00 €</div>
                 </div>
 
                 <div class="menu-item reveal">
                     <div class="menu-item-info">
-                        <div class="menu-item-name">Portion de Frites</div>
-                        <div class="menu-item-desc">Frites fraîches maison, croustillantes à l'extérieur, fondantes à l'intérieur. Ketchup ou mayo.</div>
+                        <div class="menu-item-name">Quiches végétariennes</div>
+                        <div class="menu-item-desc">Une quiche individuelle chaude aux légumes de saison, servie avec une salade d'accompagnement.</div>
                     </div>
-                    <div class="menu-item-price">4,50 €</div>
+                    <div class="menu-item-price">13,00 €</div>
                 </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Spare ribs</div>
+                        <div class="menu-item-desc">Travers de porc laqués et caramélisés, servis avec frites fraîches.</div>
+                    </div>
+                    <div class="menu-item-price">16,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Petite frite</div>
+                    </div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Grande frite</div>
+                    </div>
+                    <div class="menu-item-price">6,00 €</div>
+                </div>
+
+                <div class="divider"><span class="divider-icon">🍦</span></div>
+
+                <!-- Section Desserts -->
+                <h3 class="menu-section-title reveal">Desserts</h3>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Brésilienne</div>
+                        <div class="menu-item-desc">Glace vanille, sauce caramel et éclats de noisettes caramélisées.</div>
+                    </div>
+                    <div class="menu-item-price">6,00 €</div>
+                </div>
+
+                <div class="menu-item reveal">
+                    <div class="menu-item-info">
+                        <div class="menu-item-name">Dame blanche</div>
+                        <div class="menu-item-desc">Glace vanille de qualité premium nappée de chocolat chaud maison.</div>
+                    </div>
+                    <div class="menu-item-price">6,00 €</div>
+                </div>
+
             </div>
 
         </div>
@@ -518,9 +1382,9 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img logo-img--footer">
+                        <img src="assets/logo-long.png" alt="The Blackfriars – Irish Pub Logo" class="logo-img logo-img--footer">
                     </a>
-                    <p>L'authenticité d'un pub irlandais au cœur de Louvain-la-Neuve.</p>
+                    <p>L'authenticité d'un pub irlandais au cœur de Louvain-la-Neuve. Guinness, whiskey et bonne craic.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
@@ -544,14 +1408,23 @@
                 <div class="footer-col">
                     <h4>Suivez-nous</h4>
                     <div class="footer-social">
-                        <a href="https://instagram.com/theblackfriars_lln" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-                        <a href="https://facebook.com/theblackfriarslln" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+                        <a href="https://www.facebook.com/TheBlackfriarsPub/?locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="https://www.instagram.com/the_blackfriars_pub/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 The Blackfriars. Sláinte! ☘</p>
-                <p>L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
+                <p>© 2026 The Blackfriars  ☘</p>
+                <p style="margin-top: 5px;">
+                    <a href="mentions-legales.html" style="color: var(--color-text-muted); transition: color var(--transition-fast);" onmouseover="this.style.color='var(--color-gold)'" onmouseout="this.style.color='var(--color-text-muted)'">Mentions légales</a>
+                    <span style="color: var(--color-text-dim); margin: 0 8px;">|</span>
+                    <a href="politique-de-confidentialite.html" style="color: var(--color-text-muted); transition: color var(--transition-fast);" onmouseover="this.style.color='var(--color-gold)'" onmouseout="this.style.color='var(--color-text-muted)'">Politique de confidentialité</a>
+                </p>
+                <p style="margin-top: 10px;">L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
             </div>
         </div>
     </footer>
