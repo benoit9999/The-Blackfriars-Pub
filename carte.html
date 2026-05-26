@@ -6,7 +6,7 @@
     <title>La Carte – Bières, Cocktails & Food | The Blackfriars</title>
     <meta name="description" content="Découvrez notre carte : 16 bières pression, cocktails signature, whiskies d'exception et plats british faits maison. Menu interactif The Blackfriars.">
     <meta name="theme-color" content="#00402E">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☘%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
 
     <script type="application/ld+json">
     {
@@ -42,8 +42,7 @@
     <header class="site-header" id="siteHeader">
         <div class="header-inner">
             <a href="index.html" class="logo" aria-label="The Blackfriars – Accueil">
-                <div class="logo-icon">☘</div>
-                <div class="logo-text">The Blackfriars <span>Est. 2024 · Irish Pub</span></div>
+                <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img">
             </a>
             <nav class="nav-desktop" aria-label="Navigation principale">
                 <ul>
@@ -367,10 +366,32 @@
                     <div class="menu-item-price">9,00 €</div>
                 </div>
 
-                <div style="text-align: center; margin-top: var(--space-4xl);" class="reveal">
-                    <h3 style="font-family: var(--font-heading); color: var(--color-gold); margin-bottom: var(--space-md);">La Roue des Arômes</h3>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-lg);">Utilisez notre roue des arômes pour affiner votre palais et découvrir de nouveaux profils gustatifs.</p>
-                    <img src="assets/roue-aromes-placeholder.png" alt="Roue des Arômes des Whiskies" style="max-width: 100%; border-radius: var(--radius-md); border: 1px solid var(--color-gold); box-shadow: var(--shadow-gold); margin: 0 auto;">
+                <div class="aroma-section reveal" style="margin-top: var(--space-4xl); text-align: center;">
+                    <h3 style="font-family: var(--font-heading); color: var(--color-gold); margin-bottom: var(--space-sm); font-size: 1.8rem;">La Roue des Arômes Interactive</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Cliquez sur une catégorie ou faites tourner la roue pour explorer la richesse et la complexité aromatique de nos whiskies.
+                    </p>
+                    
+                    <div class="aroma-container">
+                        <!-- Roue SVG dynamique -->
+                        <div class="aroma-wheel-wrapper">
+                            <div class="aroma-pointer">▼</div>
+                            <div class="aroma-wheel-inner" id="aromaWheel">
+                                <!-- L'SVG sera généré ici dynamiquement par JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <!-- Carte d'information -->
+                        <div class="aroma-card" id="aromaCard">
+                            <div class="aroma-card-header">
+                                <span class="aroma-card-icon" id="aromaIcon">🍊</span>
+                                <h4 id="aromaTitle">Fruité</h4>
+                            </div>
+                            <div class="aroma-card-body" id="aromaBody">
+                                <!-- Rempli dynamiquement -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -497,8 +518,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">☘</div>
-                        <div class="logo-text">The Blackfriars <span>Irish Pub</span></div>
+                        <img src="assets/logo.webp" alt="The Blackfriars – Irish Pub Logo" class="logo-img logo-img--footer">
                     </a>
                     <p>L'authenticité d'un pub irlandais au cœur de Louvain-la-Neuve.</p>
                 </div>

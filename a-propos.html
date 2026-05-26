@@ -6,7 +6,7 @@
     <title>Notre Histoire – The Blackfriars | Irish Pub Authentique</title>
     <meta name="description" content="Découvrez l'histoire de The Blackfriars, le pub irlandais authentique de Louvain-la-Neuve. Tradition, passion et convivialité.">
     <meta name="theme-color" content="#00402E">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☘%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -84,8 +84,11 @@
                     <p class="section-desc" style="margin-bottom: var(--space-lg);">
                         Le Blackfriars est porté par un projet associatif (ASBL). Vous pouvez soutenir nos initiatives et notre gestion étudiante/dominicaine en participant à notre projet.
                     </p>
-                    <div style="background: #111; padding: var(--space-md); border-radius: var(--radius-md); font-family: monospace; font-size: 1.2rem; color: #E8C35D; letter-spacing: 2px;">
-                        IBAN : BE75 3501 0266 7751
+                    <div style="background: #111; padding: var(--space-md) var(--space-lg); border-radius: var(--radius-md); font-family: monospace; font-size: 1.2rem; color: #E8C35D; letter-spacing: 2px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap;">
+                        <span>IBAN : <strong id="ibanValue">BE75 3501 0266 7751</strong></span>
+                        <button id="copyIbanBtn" class="btn btn-outline-copper btn-sm" style="min-width: 110px; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);" aria-label="Copier l'IBAN">
+                            📋 Copier
+                        </button>
                     </div>
                 </div>
             </div>
