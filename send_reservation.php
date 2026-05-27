@@ -20,11 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     
-    // Adresse e-mail de destination (celle du pub)
-    $to = "neodastes@gmail.com";
+    // Adresse e-mail du Pub
+    $to = "info@blackfriars.pub";
     
     // Sujet de l'e-mail
-    $subject = "☘️ Nouvelle demande de Réservation - " . $name;
+    $subject = " Nouvelle demande de Réservation  " . $name;
     
     $email_content = "
     <html>
