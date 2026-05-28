@@ -2552,3 +2552,91 @@ body { padding-bottom: var(--mobile-bar); }
     }
 }
 
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+.back-to-top {
+    position: fixed;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px) scale(0.9);
+    transition: 
+        transform var(--transition-spring), 
+        opacity var(--transition-base), 
+        visibility var(--transition-base), 
+        background-color var(--transition-fast), 
+        border-color var(--transition-fast), 
+        color var(--transition-fast), 
+        box-shadow var(--transition-fast);
+    box-shadow: var(--shadow-md);
+    outline: none;
+}
+
+.back-to-top svg {
+    width: 22px;
+    height: 22px;
+    transition: transform var(--transition-base);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold-bright);
+    color: #0A0A0A;
+    box-shadow: 0 4px 20px rgba(212,175,55,0.4), var(--shadow-gold);
+    transform: translateY(-4px) scale(1.05);
+}
+
+.back-to-top:hover svg {
+    transform: translateY(-2px);
+}
+
+.back-to-top:active {
+    transform: translateY(-2px) scale(0.95);
+    box-shadow: 0 2px 10px rgba(212,175,55,0.2);
+}
+
+/* Mobile & Tablet adjustments */
+@media (max-width: 1023px) {
+    .back-to-top {
+        bottom: calc(var(--mobile-bar) + var(--space-md));
+        right: var(--space-md);
+        width: 44px;
+        height: 44px;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .back-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Disable translate hover on touch devices to avoid sticky hover state */
+    .back-to-top:hover {
+        transform: translateY(0) scale(1);
+    }
+    
+    .back-to-top:active {
+        transform: scale(0.92);
+    }
+}
+
+

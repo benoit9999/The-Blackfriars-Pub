@@ -821,4 +821,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ═══ BACK TO TOP BUTTON ═══
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'backToTop';
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.setAttribute('aria-label', 'Retour en haut');
+    backToTopBtn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    `;
+    document.body.appendChild(backToTopBtn);
+
+    // Show/hide button on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    // Smooth scroll to top on click (custom animation for cross-browser compatibility)
+    backToTopBtn.addEventListener('click', () => {
+        const startPosition = window.scrollY || document.documentElement.scrollTop;
+        if (startPosition === 0) return;
+
+        const duration = 750; // duration in ms
+        const startTime = performance.now();
+
+        // Decelerating to zero velocity (easeOutCubic)
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        function scrollAnimation(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const easeProgress = easeOutCubic(progress);
+
+            window.scrollTo(0, startPosition * (1 - easeProgress));
+
+            if (progress < 1) {
+                requestAnimationFrame(scrollAnimation);
+            }
+        }
+
+        requestAnimationFrame(scrollAnimation);
+    });
+
+
 });
+
